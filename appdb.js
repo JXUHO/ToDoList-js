@@ -143,6 +143,6 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.listen(3000, function () {
-  console.log("server is on 3000");
+app.listen(process.env.PORT || 3000, function () {
+  console.log("server is on");
 });
