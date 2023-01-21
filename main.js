@@ -48,18 +48,18 @@ const List = mongoose.model("List", listSchema);
 app.get("/", function(req, res) {
   ///// Items collection의 내용 전부를 foundItems라는 이름으로 가져옴 /////
   Item.find({}, function (err, foundItems) {
-    if (foundItems.length === 0) {
-      Item.insertMany(defaultItems, function(err){
-        if(err) {
-          console.log(err);
-        } else {
-          console.log("sucessfully saved defaultItems into DB");
-        }
-      });
-      res.redirect("/");
-    } else {
+  //   if (foundItems.length === 0) {
+  //     Item.insertMany(defaultItems, function(err){
+  //       if(err) {
+  //         console.log(err);
+  //       } else {
+  //         console.log("sucessfully saved defaultItems into DB");
+  //       }
+  //     });
+  //     res.redirect("/");
+  //   } else {
       res.render("listdb", { listTitle: "Today", addToDo: foundItems });
-    }  
+    // }  
   });
   
 });
