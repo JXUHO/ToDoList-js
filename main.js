@@ -14,7 +14,7 @@ app.use(express.static("public"));
 // mongoose strict옵션 false로 해제, mongoose로 db와 연결
 mongoose.set("strictQuery", false);
 // mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
-mongoose.connect("mongodb+srv://jxuholee:gIJM6fkdyFUZWDuN@cluster0.6bcgsry.mongodb.net/todolistDB")
+mongoose.connect("mongodb+srv://jxuholee:RDfnOGBbniZzGAyQ@cluster0.6bcgsry.mongodb.net/todolistDB")
 
 const itemsSchema = mongoose.Schema({
   name: String,
